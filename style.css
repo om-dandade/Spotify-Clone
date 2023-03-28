@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@500&family=Roboto&display=swap');
 
 body{
-    background-color: #fffaf5;
+    background-color: #f2faff;
 }
 
 *{
@@ -36,4 +36,47 @@ nav ul li{
     align-items: center;
     font-weight: bolder;
     font-size: 1.5rem;
+}
+
+.container{
+    min-height: 75vh;
+
+    background-color: #2D2727;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    margin: 30px auto;
+    width: 70vw;
+    border-radius: 12px;
+    padding: 25px;
+    background-image: url("/Assets/bg.jpg") ;
+}
+
+.player{
+    display: flex;
+    flex-direction: column;
+
+    position: sticky;
+    height: 100px;
+
+    color: white;
+    background-color: #413543;
+    
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.icons{
+    margin: 8px;
+}
+
+.icons i{
+    padding: 0 12px;
+    cursor: pointer;
+}
+
+#progressBar{
+    width: 80vw;
+    height: 20px;
 }
