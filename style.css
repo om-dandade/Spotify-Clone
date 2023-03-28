@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@500&family=Roboto&display=swap');
+
+body{
+    background-color: #fffaf5;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    font-family: 'Roboto', sans-serif;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 65px;
+    background-color: #2D2727 ;
+    color: white;
+}
+
+nav ul li{
+    padding: 0 12px;
+}
+
+.brand img{
+    height: 52px;
+    padding: 8px;
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
