@@ -7,9 +7,7 @@ body{
 *{
     margin: 0;
     padding: 0;
-}
-
-nav{
+    
     font-family: 'Roboto', sans-serif;
 }
 
@@ -40,13 +38,13 @@ nav ul li{
 
 .container{
     min-height: 75vh;
-
+    width: 70vw;
+    
     background-color: #2D2727;
     color: white;
-    font-family: 'Roboto', sans-serif;
     display: flex;
     margin: 30px auto;
-    width: 70vw;
+    
     border-radius: 12px;
     padding: 25px;
     background-image: url("/Assets/bg.jpg") ;
@@ -79,4 +77,40 @@ nav ul li{
 #progressBar{
     width: 80vw;
     height: 20px;
+}
+
+.songList{
+    width: 80%;
+}
+.songItem{
+    display: flex;
+    height: 48px;
+    color: white;
+    margin: 18px 0;
+    justify-content: space-between;
+}
+
+.songItem span{
+    display: flex;
+    padding: 0 12px;
+    align-items: center;
+}
+
+.songItem span i{
+    cursor: pointer;
+}
+
+.songItem img{
+    height: 45px;
+    border-radius: 4px;
+}
+
+.songInfo{
+    position: absolute;
+    left: 9vw;
+}
+.songInfo img{
+    height: 20px;
+    opacity: 0;
+    transition: opacity 1s ease-in;
 }
