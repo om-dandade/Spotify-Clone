@@ -2,7 +2,6 @@ console.log("Welcome to spotify");
 
 //variables
 let curSong = 0;
-let audioElement = new Audio("Assets/songs/1.mp3");
 let playButton = document.getElementById("playButton");
 let progressBar = document.getElementById("progressBar");
 let playAnimation = document.getElementById("playAni");
@@ -12,17 +11,14 @@ let backward = document.getElementById("backward");
 let forward = document.getElementById("forward");
 
 let songs = [
-    {songName:"Let me love you - Justin Beiber", songPath:"Assets/songs/1.mp3", coversPath:"Assets/covers/1.jpg"},
-    {songName:"Your Name - Kimeno Nava", songPath:"Assets/songs/2.mp3", coversPath:"Assets/covers/2.jpg"},
-    {songName:"Sorry - Justin Beiber", songPath:"Assets/songs/3.mp3", coversPath:"Assets/covers/3.jpg"},
-    {songName:"Baby - Justin Beiber", songPath:"Assets/songs/4.mp3", coversPath:"Assets/covers/4.jpg"},
-    {songName:"Piches - Justin Beiber", songPath:"Assets/songs/5.mp3", coversPath:"Assets/covers/5.jpg"},
-    {songName:"STAY - Justin Beiber", songPath:"Assets/songs/6.mp3", coversPath:"Assets/covers/6.jpg"},
-    {songName:"Let me love you - Justin Beiber", songPath:"Assets/songs/7.mp3", coversPath:"Assets/covers/7.jpg"},
-    {songName:"Let me love you - Justin Beiber", songPath:"Assets/songs/8.mp3", coversPath:"Assets/covers/8.jpg"},
-    {songName:"Let me love you - Justin Beiber", songPath:"Assets/songs/9.mp3", coversPath:"Assets/covers/9.jpg"},
-    {songName:"Let me love you - Justin Beiber", songPath:"Assets/songs/10.mp3", coversPath:"Assets/covers/10.jpg"},
+    {songName:"Let me love you - Justin Beiber", songPath:"https://pagal-world.com.in/files/download/id/659", coversPath:"Assets/covers/1.jpg"},
+    {songName:"Sparkle - Your Name", songPath:"https://pagallworld.co.in/wp-content/uploads/2023/12/Your-Name-Sparkle.mp3", coversPath:"Assets/covers/2.jpg"},
+    {songName:"Sorry - Justin Beiber", songPath:"https://musicdownload.cc/files/download/id/97", coversPath:"Assets/covers/3.jpg"},
+    {songName:"Baby - Justin Beiber", songPath:"https://pagalworlld.com/files/download/id/4702", coversPath:"Assets/covers/4.jpg"},
+    {songName:"Piches - Justin Beiber", songPath:"https://pagalsongs.com.in/files/download/id/622", coversPath:"Assets/covers/5.jpg"},
+    {songName:"STAY - Justin Beiber", songPath:"https://pagaliworld.com/files/download/id/3743", coversPath:"Assets/covers/6.jpg"},
 ]
+let audioElement = new Audio(songs[0].songPath);
 
 //updating page content
 songItems.forEach((element, i) => {
@@ -60,10 +56,13 @@ const playCurSongAni = ()=>{
     playAnimation.style.opacity = 1;
 }
 
+const songInfo = document.querySelector(".songInfo a");
 const updateAndPlay = ()=>{
-    playCurSongAni();
     audioElement.src = songs[curSong].songPath;
     audioElement.play();
+    console.log(songInfo.textContent);
+    songInfo.textContent = songs[curSong].songName;
+    playCurSongAni();
 }
 
 //play from song list
